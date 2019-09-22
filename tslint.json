@@ -1,0 +1,68 @@
+{
+    "extends": ["tslint-config-egg"],
+    "rules": {
+        // 字符串单引号
+        "quotemark": [
+            true,
+            "single"
+        ],
+        // 不允许console
+        "no-console": [
+            true,
+            "dir",
+            "log",
+            "error",
+            "warn"
+        ],
+        // 接口名称以大写I开头
+        "interface-name": [
+            true
+        ],
+        // 类成员的必须有public/private等修饰符
+        "member-access": [
+            true
+        ],
+        // 类成员排序，constructor在方法前面，静态成员在实例成员前面， public方法在protected方法前，private方法最后
+        "member-ordering": [
+            true,
+            {
+                "order": "fields-first"
+            }
+        ],
+        // 对象中的键名不做排序要求
+        "object-literal-sort-keys": false,
+        // 一个文件不能超过10个类
+        "max-classes-per-file": [
+            true,
+            10
+        ],
+        // 变量名允许在开头使用下划线
+        "variable-name": [
+            true,
+            "allow-leading-underscore"
+        ],
+        // 强制语句对齐，强制类，接口，类型文字，对象文字和对象解构的成员对齐
+        "align": [
+            true,
+            "statements",
+            "members"
+        ],
+        // 对换行的方式不做校验，window的CRLF以及linux的LF都可以
+        "linebreak-style": [false],
+        // 禁止出现空代码块，允许 catch 是空代码块
+        "no-empty": [
+            false,
+            "allow-empty-catch"
+        ],
+        // 必须使用箭头函数，除非是单独的函数声明或是命名函数
+        "only-arrow-functions": [
+            false,
+            "allow-declarations",
+            "allow-named-functions"
+        ],
+        // 禁止行尾有空格
+        "no-trailing-whitespace": true,
+        // 允许使用require语句
+        "no-var-requires": false
+    }
+}
